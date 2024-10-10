@@ -61,13 +61,6 @@ export default function MainPage() {
             </Suspense>
           ))
           .otherwise(() => null)}
-        {match(searchState)
-          .with(Pattern.not("idle"), () => (
-            <Suspense>
-              <SearchResultsSection />
-            </Suspense>
-          ))
-          .otherwise(() => null)}
       </Stack>
     </Container>
   );
